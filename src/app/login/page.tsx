@@ -66,11 +66,11 @@ export default function LoginPage() {
 
   return (
 
-    <main className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+    <main className="min-h-screen flex items-center justify-center bg-gray-100 p-4 sm:p-6">
 
-      <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
+      <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-5 sm:p-8">
 
-        <h1 className="text-4xl font-bold text-center mb-8">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">
 
           {isLogin
             ? "Login 🔐"
@@ -89,7 +89,7 @@ export default function LoginPage() {
                 e.target.value
               )
             }
-            className="px-5 py-4 rounded-2xl border border-gray-300 outline-none"
+            className="px-4 sm:px-5 py-3 sm:py-4 rounded-2xl border border-gray-300 outline-none"
           />
 
           <input
@@ -101,13 +101,13 @@ export default function LoginPage() {
                 e.target.value
               )
             }
-            className="px-5 py-4 rounded-2xl border border-gray-300 outline-none"
+            className="px-4 sm:px-5 py-3 sm:py-4 rounded-2xl border border-gray-300 outline-none"
           />
 
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="bg-black text-white py-4 rounded-2xl font-semibold"
+            className="bg-black text-white py-3 sm:py-4 rounded-2xl font-semibold"
           >
 
             {loading
@@ -124,7 +124,7 @@ export default function LoginPage() {
                 !isLogin
               )
             }
-            className="text-blue-600"
+            className="text-blue-600 text-sm sm:text-base"
           >
 
             {isLogin

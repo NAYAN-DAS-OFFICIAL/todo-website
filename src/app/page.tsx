@@ -315,18 +315,18 @@ export default function Home() {
   );
 
   return (
-    <main className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+    <main className="min-h-screen bg-gray-100 flex items-center justify-center p-2 sm:p-6">
 
       <Toaster position="top-right" />
 
-      <div className="w-full max-w-2xl bg-white rounded-3xl shadow-xl p-8">
+      <div className="w-full max-w-2xl bg-white rounded-3xl shadow-xl p-4 sm:p-8">
 
-        <h1 className="text-4xl font-bold text-center mb-8">
+        <h1 className="text-2xl sm:text-4xl font-bold text-center mb-8">
           Todo Website 🚀
         </h1>
 
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-2xl font-bold">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
+          <h1 className="text-xl sm:text-2xl font-bold text-center sm:text-left">
             List Your Daily Plan Here 🗓️
           </h1>
 
@@ -349,7 +349,7 @@ export default function Home() {
             loading={loading}
           />
 
-          <div className="flex gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
             <input
               type="date"
@@ -379,7 +379,7 @@ export default function Home() {
                     | "Low"
                 )
               }
-              className="px-5 py-4 rounded-2xl border border-gray-300 outline-none"
+              className="w-full px-5 py-4 rounded-2xl border border-gray-300 outline-none"
             >
 
               <option value="High">
@@ -409,15 +409,15 @@ export default function Home() {
           onChange={(e) =>
             setSearch(e.target.value)
           }
-          className="w-full px-5 py-4 mb-6 rounded-2xl border border-gray-300 outline-none focus:ring-2 focus:ring-black"
+          className="w-full px-5 py-4 mb-6 rounded-2xl border border-gray-300 outline-none focus:ring-2 text-sm sm:text-base"
         />
 
         {/* FILTER BUTTONS */}
-        <div className="flex flex-wrap gap-3 mb-6 justify-center">
+        <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 justify-center">
 
           <button
             onClick={() => setFilter("all")}
-            className={`px-5 py-2 rounded-xl transition ${
+            className={`px-4 sm:px-5 py-2 rounded-xl transition text-sm sm:text-base ${
               filter === "all"
                 ? "bg-black text-white"
                 : "bg-gray-200"
@@ -428,7 +428,7 @@ export default function Home() {
 
           <button
             onClick={() => setFilter("today")}
-            className={`px-5 py-2 rounded-xl transition ${
+            className={`px-4 sm:px-5 py-2 rounded-xl transition text-sm sm:text-base ${
               filter === "today"
                 ? "bg-black text-white"
                 : "bg-gray-200"
@@ -439,7 +439,7 @@ export default function Home() {
 
           <button
             onClick={() => setFilter("completed")}
-            className={`px-5 py-2 rounded-xl transition ${
+            className={`px-4 sm:px-5 py-2 rounded-xl transition text-sm sm:text-base ${
               filter === "completed"
                 ? "bg-black text-white"
                 : "bg-gray-200"
@@ -450,7 +450,7 @@ export default function Home() {
 
           <button
             onClick={() => setFilter("pending")}
-            className={`px-5 py-2 rounded-xl transition ${
+            className={`px-4 sm:px-5 py-2 rounded-xl transition text-sm sm:text-base ${
               filter === "pending"
                 ? "bg-black text-white"
                 : "bg-gray-200"
@@ -461,7 +461,7 @@ export default function Home() {
 
           <button
             onClick={() => setFilter("date")}
-            className={`px-5 py-2 rounded-xl transition ${
+            className={`px-4 sm:px-5 py-2 rounded-xl transition text-sm sm:text-base ${
               filter === "date"
                 ? "bg-black text-white"
                 : "bg-gray-200"

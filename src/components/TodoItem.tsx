@@ -38,9 +38,9 @@ export default function TodoItem({
 
   return (
 
-    <div className="bg-gray-100 rounded-2xl p-5 flex items-center justify-between">
+    <div className="bg-gray-100 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
 
-      <div className="flex items-center gap-4 flex-1">
+      <div className="flex items-start gap-4 flex-1 w-full">
 
         <input
           type="checkbox"
@@ -70,7 +70,7 @@ export default function TodoItem({
                 className={
                   todo.completed
                     ? "text-lg line-through text-gray-400"
-                    : "text-lg"
+                    : "text-base sm:text-lg break-words"
                 }
               >
                 {todo.text}
@@ -115,7 +115,7 @@ export default function TodoItem({
 
       </div>
 
-      <div className="flex items-center gap-4 ml-4">
+      <div className="flex items-center gap-4 ml-0 sm:ml-4 flex-wrap">
 
         {editingId === todo.id ? (
 
