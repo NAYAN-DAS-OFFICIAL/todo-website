@@ -322,7 +322,7 @@ export default function Home() {
       <div className="w-full max-w-2xl bg-white rounded-3xl shadow-xl p-8">
 
         <h1 className="text-4xl font-bold text-center mb-8">
-          Todo Application 🚀
+          Todo Website 🚀
         </h1>
 
         <div className="flex justify-between items-center mb-8">
